@@ -13,6 +13,7 @@ var pikeStand = {
   avgCookie: 6.3,
   hourlyCustomers:[],
   hourlyCookies:[],
+  sum:0,
 
 // this for-loop is to try and calculate 15 different random numbers to represent number of customers for each hour they are open and store it into an array
   generateHourlyCustomer: function(){
@@ -24,9 +25,17 @@ var pikeStand = {
   //now have to multiply average cookie by each random number in the hourlyCustomers array and have them saved to hourlyCookies
   generateHourlyCookies: function(){
     for(var j = 0; j < hoursOpen.length; j++){
-      var cookiesBought = this.avgCookie * this.hourlyCustomers[j];
+      var cookiesBought = Math.round(this.avgCookie * this.hourlyCustomers[j]);
       this.hourlyCookies.push(cookiesBought);
+      // get hourly cookies count
+      // console.log(pikeStand.hourlyCookies);
     }
+
+    for (var c = 0; c < pikeStand.hourlyCookies.length; c++ ) {
+      pikeStand.sum += pikeStand.hourlyCookies[c];
+      // console.log('cookies in loop', pikeStand.hourlyCookies[c]);
+    }
+    console.log('sum', pikeStand.sum);
   }
 };
 
@@ -35,15 +44,8 @@ pikeStand.generateHourlyCookies();
 
 var olElement = document.getElementById('cookies');
 for (var i = 0; i < pikeStand.hourlyCustomers.length; i++){
-  console.log(pikeStand.hourlyCookies[i]);
+  // console.log(pikeStand.hourlyCookies[i]);
   var listItem = document.createElement('li');
   listItem.textContent = hoursOpen[i] + ' ' + pikeStand.hourlyCookies[i];
   olElement.appendChild(listItem);
 }
-
-
-// pikeStand.listSales = function(){
-//   for(var i = 0; i<openHours.length; i++){
-//
-// //   }
-// };
