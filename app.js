@@ -1,6 +1,6 @@
 'use strict';
 //this function is going to create a random number based on the min and max values that appear in the object
-function randomNumber(min, max){
+function generateRandomNum(min, max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
@@ -12,13 +12,28 @@ function Store(minimumCust, maximumCust, avgCookiePerCust, where){
   this.maximumCust = maximumCust;
   this.avgCookiePerCust = avgCookiePerCust;
   this.where = where;
+  this.numOfCustVisitingEachHour = [];
+  this.numOfCookiesBoughtEachHour = [];
+  this.totalCookiesBought = 0;
+  // myStores.push(this);
+  // console.table(myStores);
 };
 
+Store.generateHourlyCustomer = function(){
+  for(var i = 0; i < hoursOpen.length; i++){
+    var numOfCustVisitingEachHour = generateRandomNum(this.min, this.max);
+    this.hourlyCustomers.push(numOfCustVisitingEachHour);
+  }
+};
+
+// var myStores = [];
 var firstAndPike = new Store(23, 65, 6.3, 'First and Pike');
 var seatacAirport = new Store(3, 24, 1.2, 'Seatac Airport');
 var seattleCenter = new Store(11, 38, 3.7, 'Seattle Center');
 var capitolHill = new Store(20, 38, 2.3, 'Capitol Hill');
 var alki = new Store (2, 16, 4.6, 'Alki');
+
+firstAndPike.generateHourlyCustomer;
 
 
 
