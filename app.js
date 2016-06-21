@@ -53,6 +53,7 @@ var sumElement = document.createElement('li');
 sumElement.textContent = 'Total: ' + pikeStand.sum;
 ulElement.appendChild(sumElement);
 
+
 //here begins the SECOND STAND at SEATAC
 var seatacStand = {
   min: 3,
@@ -98,4 +99,145 @@ for (var k = 0; k < seatacStand.hourlyCustomers.length; k++){
 }
 var sumElement = document.createElement('li');
 sumElement.textContent = 'Total: ' + seatacStand.sum;
+ulElement.appendChild(sumElement);
+
+
+// STORE THREE!!
+var centerStand = {
+  min: 11,
+  max: 38,
+  avgCookie: 3.7,
+  hourlyCustomers:[],
+  hourlyCookies:[],
+  sum:0,
+
+// this for-loop is to try and calculate 15 different random numbers to represent number of customers for each hour they are open and store it into an array
+  generateHourlyCustomer: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var numberOfCustomers = randomNumber(this.min, this.max);
+      this.hourlyCustomers.push(numberOfCustomers);
+    }
+  },
+  //now have to multiply average cookie by each random number in the hourlyCustomers array and have them saved to hourlyCookies
+  generateHourlyCookies: function(){
+    for(var j = 0; j < hoursOpen.length; j++){
+      var cookiesBought = Math.round(this.avgCookie * this.hourlyCustomers[j]);
+      this.hourlyCookies.push(cookiesBought);
+      // get hourly cookies count
+      // console.log(pikeStand.hourlyCookies);
+    }
+
+    for (var c = 0; c < centerStand.hourlyCookies.length; c++ ) {
+      centerStand.sum += centerStand.hourlyCookies[c];
+      // console.log('cookies in loop', pikeStand.hourlyCookies[c]);
+    }
+    console.log('sum', centerStand.sum);
+  }
+};
+
+centerStand.generateHourlyCustomer();
+centerStand.generateHourlyCookies();
+
+var ulElement = document.getElementById('centerCookies');
+for (var k = 0; k < centerStand.hourlyCustomers.length; k++){
+  // console.log(pikeStand.hourlyCookies[i]);
+  var listItem = document.createElement('li');
+  listItem.textContent = hoursOpen[k] + ' ' + centerStand.hourlyCookies[k];
+  ulElement.appendChild(listItem);
+}
+var sumElement = document.createElement('li');
+sumElement.textContent = 'Total: ' + centerStand.sum;
+ulElement.appendChild(sumElement);
+
+//STORE FOUR STARTS HERE
+var capitolStand = {
+  min: 20,
+  max: 38,
+  avgCookie: 2.3,
+  hourlyCustomers:[],
+  hourlyCookies:[],
+  sum:0,
+
+// this for-loop is to try and calculate 15 different random numbers to represent number of customers for each hour they are open and store it into an array
+  generateHourlyCustomer: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var numberOfCustomers = randomNumber(this.min, this.max);
+      this.hourlyCustomers.push(numberOfCustomers);
+    }
+  },
+  //now have to multiply average cookie by each random number in the hourlyCustomers array and have them saved to hourlyCookies
+  generateHourlyCookies: function(){
+    for(var j = 0; j < hoursOpen.length; j++){
+      var cookiesBought = Math.round(this.avgCookie * this.hourlyCustomers[j]);
+      this.hourlyCookies.push(cookiesBought);
+      // get hourly cookies count
+      // console.log(pikeStand.hourlyCookies);
+    }
+
+    for (var c = 0; c < capitolStand.hourlyCookies.length; c++ ) {
+      capitolStand.sum += capitolStand.hourlyCookies[c];
+      // console.log('cookies in loop', pikeStand.hourlyCookies[c]);
+    }
+    console.log('sum', capitolStand.sum);
+  }
+};
+
+capitolStand.generateHourlyCustomer();
+capitolStand.generateHourlyCookies();
+
+var ulElement = document.getElementById('capitolCookies');
+for (var a = 0; a < capitolStand.hourlyCustomers.length; a++){
+  // console.log(pikeStand.hourlyCookies[i]);
+  var listItem = document.createElement('li');
+  listItem.textContent = hoursOpen[a] + ' ' + capitolStand.hourlyCookies[a];
+  ulElement.appendChild(listItem);
+}
+var sumElement = document.createElement('li');
+sumElement.textContent = 'Total: ' + capitolStand.sum;
+ulElement.appendChild(sumElement);
+
+//FIFTH STORE
+var alkiStand = {
+  min: 2,
+  max: 16,
+  avgCookie: 4.6,
+  hourlyCustomers:[],
+  hourlyCookies:[],
+  sum:0,
+
+// this for-loop is to try and calculate 15 different random numbers to represent number of customers for each hour they are open and store it into an array
+  generateHourlyCustomer: function(){
+    for(var i = 0; i < hoursOpen.length; i++){
+      var numberOfCustomers = randomNumber(this.min, this.max);
+      this.hourlyCustomers.push(numberOfCustomers);
+    }
+  },
+  //now have to multiply average cookie by each random number in the hourlyCustomers array and have them saved to hourlyCookies
+  generateHourlyCookies: function(){
+    for(var j = 0; j < hoursOpen.length; j++){
+      var cookiesBought = Math.round(this.avgCookie * this.hourlyCustomers[j]);
+      this.hourlyCookies.push(cookiesBought);
+      // get hourly cookies count
+      // console.log(pikeStand.hourlyCookies);
+    }
+
+    for (var c = 0; c < alkiStand.hourlyCookies.length; c++ ) {
+      alkiStand.sum += alkiStand.hourlyCookies[c];
+      // console.log('cookies in loop', pikeStand.hourlyCookies[c]);
+    }
+    console.log('sum', alkiStand.sum);
+  }
+};
+
+alkiStand.generateHourlyCustomer();
+alkiStand.generateHourlyCookies();
+
+var ulElement = document.getElementById('alkiCookies');
+for (var a = 0; a < alkiStand.hourlyCustomers.length; a++){
+  var listItem = document.createElement('li');
+  listItem.textContent = hoursOpen[a] + ' ' + alkiStand.hourlyCookies[a];
+  ulElement.appendChild(listItem);
+}
+var sumElement = document.createElement('li');
+sumElement.textContent = 'Total: ' + alkiStand.sum;
 ulElement.appendChild(sumElement);
