@@ -5,7 +5,7 @@ function randomNumber(min, max){
 };
 //
 // //this array is to hold 15 elements for each hour that the stands are opened each day
-var hoursOpen = ['6 am','7 am','8 am','9 am','10 am','11 am','12 pm','1 pm','2 pm','3 pm','4 pm','5 pm','6 pm','7 pm','8 pm'];
+var hoursOpen = ['6am','7am','8am','9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm','8pm'];
 
 var pikeStand = {
   min: 23,
@@ -46,11 +46,11 @@ var ulElement = document.getElementById('pikeCookies');
 for (var i = 0; i < pikeStand.hourlyCustomers.length; i++){
   // console.log(pikeStand.hourlyCookies[i]);
   var listItem = document.createElement('li');
-  listItem.textContent = hoursOpen[i] + ' ' + pikeStand.hourlyCookies[i];
+  listItem.textContent = hoursOpen[i] + ': ' + pikeStand.hourlyCookies[i] + ' cookies.';
   ulElement.appendChild(listItem);
 }
 var sumElement = document.createElement('li');
-sumElement.textContent = 'Total: ' + pikeStand.sum;
+sumElement.textContent = 'Total:' +' ' + pikeStand.sum + ' cookies.';
 ulElement.appendChild(sumElement);
 
 
@@ -94,11 +94,11 @@ var ulElement = document.getElementById('seatacCookies');
 for (var k = 0; k < seatacStand.hourlyCustomers.length; k++){
   // console.log(pikeStand.hourlyCookies[i]);
   var listItem = document.createElement('li');
-  listItem.textContent = hoursOpen[k] + ' ' + seatacStand.hourlyCookies[k];
+  listItem.textContent = hoursOpen[k] + ': ' + seatacStand.hourlyCookies[k] + ' cookies.';
   ulElement.appendChild(listItem);
 }
 var sumElement = document.createElement('li');
-sumElement.textContent = 'Total: ' + seatacStand.sum;
+sumElement.textContent = 'Total: ' + seatacStand.sum + ' cookies.';
 ulElement.appendChild(sumElement);
 
 
@@ -142,11 +142,11 @@ var ulElement = document.getElementById('centerCookies');
 for (var k = 0; k < centerStand.hourlyCustomers.length; k++){
   // console.log(pikeStand.hourlyCookies[i]);
   var listItem = document.createElement('li');
-  listItem.textContent = hoursOpen[k] + ' ' + centerStand.hourlyCookies[k];
+  listItem.textContent = hoursOpen[k] + ': ' + centerStand.hourlyCookies[k] + ' cookies.';
   ulElement.appendChild(listItem);
 }
 var sumElement = document.createElement('li');
-sumElement.textContent = 'Total: ' + centerStand.sum;
+sumElement.textContent = 'Total: ' + centerStand.sum + ' cookies.';
 ulElement.appendChild(sumElement);
 
 //STORE FOUR STARTS HERE
@@ -189,11 +189,11 @@ var ulElement = document.getElementById('capitolCookies');
 for (var a = 0; a < capitolStand.hourlyCustomers.length; a++){
   // console.log(pikeStand.hourlyCookies[i]);
   var listItem = document.createElement('li');
-  listItem.textContent = hoursOpen[a] + ' ' + capitolStand.hourlyCookies[a];
+  listItem.textContent = hoursOpen[a] + ': ' + capitolStand.hourlyCookies[a] + ' cookies.';
   ulElement.appendChild(listItem);
 }
 var sumElement = document.createElement('li');
-sumElement.textContent = 'Total: ' + capitolStand.sum;
+sumElement.textContent = 'Total: ' + capitolStand.sum + ' cookies.';
 ulElement.appendChild(sumElement);
 
 //FIFTH STORE
@@ -235,9 +235,9 @@ alkiStand.generateHourlyCookies();
 var ulElement = document.getElementById('alkiCookies');
 for (var a = 0; a < alkiStand.hourlyCustomers.length; a++){
   var listItem = document.createElement('li');
-  listItem.textContent = hoursOpen[a] + ' ' + alkiStand.hourlyCookies[a];
+  listItem.textContent = hoursOpen[a] + ': ' + alkiStand.hourlyCookies[a] + ' cookies.';
   ulElement.appendChild(listItem);
 }
 var sumElement = document.createElement('li');
-sumElement.textContent = 'Total: ' + alkiStand.sum;
+sumElement.textContent = 'Total: ' + alkiStand.sum + ' cookies.';
 ulElement.appendChild(sumElement);
