@@ -45,3 +45,13 @@ seatacAirport.generateCookiesBoughtEachHour();
 seattleCenter.generateCookiesBoughtEachHour();
 capitolHill.generateCookiesBoughtEachHour();
 alki.generateCookiesBoughtEachHour();
+
+///now to make the table
+var tableList = document.getElementById('salesData');
+for(var i = 0; i < myStores.length; i++){
+  var trEl = document.createElement ('tr');
+  var thEl = document.createElement ('th');
+  thEl.textContent = myStores[i].where;
+  trEl.appendChild(thEl);
+  tableList.appendChild(trEl);
+};
