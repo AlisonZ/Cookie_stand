@@ -42,10 +42,15 @@ var pikeStand = {
 pikeStand.generateHourlyCustomer();
 pikeStand.generateHourlyCookies();
 
-var olElement = document.getElementById('cookies');
+var ulElement = document.getElementById('cookies');
 for (var i = 0; i < pikeStand.hourlyCustomers.length; i++){
   // console.log(pikeStand.hourlyCookies[i]);
   var listItem = document.createElement('li');
   listItem.textContent = hoursOpen[i] + ' ' + pikeStand.hourlyCookies[i];
-  olElement.appendChild(listItem);
+  ulElement.appendChild(listItem);
 }
+
+var ulThing = document.getElementById('totalCookies');
+var sumElement = document.createElement('li');
+sumElement.textContent = 'Total: ' + pikeStand.sum;
+ulThing.appendChild(sumElement);
