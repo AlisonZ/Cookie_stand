@@ -25,13 +25,8 @@ Store.prototype.generateCookiesBoughtEachHour = function(){
   this.generateHourlyCustomer();
   for(var i = 0; i < hoursOpen.length; i++){
     this.numOfCookiesBoughtEachHour[i] = Math.round(this.avgCookiePerCust * this.numOfHourlyCust[i]);
-  };
-};
-
-Store.prototype.generateTotalCookiesBought = function(){
-  for (var i = 0; i < this.numOfCookiesBoughtEachHour.length; i++ ) {
     this.totalCookiesBought += this.numOfCookiesBoughtEachHour[i];
-  }
+  };
 };
 
 var firstAndPike = new Store(23, 65, 6.3, 'First and Pike');
@@ -51,7 +46,10 @@ var tableList = document.getElementById('salesData');
 for(var i = 0; i < myStores.length; i++){
   var trEl = document.createElement ('tr');
   var thEl = document.createElement ('th');
-  thEl.textContent = myStores[i].where;
+  thEl.textContent = hoursOpen[i];
   trEl.appendChild(thEl);
   tableList.appendChild(trEl);
 };
+// var tdEl = document.createElement ('td');
+// tdEl.textContent = 'hello';
+// thEl.appendChild(tdEl);
