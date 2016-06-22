@@ -29,6 +29,32 @@ Store.prototype.generateCookiesBoughtEachHour = function(){
   };
 };
 
+Store.prototype.makeAllCells = function(){
+  //this makes a row for the store
+  var trEl = document.createElement ('tr');
+//this makes a cell for the name
+  var tdEl = document.createElement ('td');
+  //this gives the cell the name of the store
+  tdEl.textContent = this.where;
+  //this closes that cell and appends it to the row level
+  trEl.appendChild(tdEl);
+//this makes cell for the totals of the store
+  tdEl = document.createElement ('td');
+//this is the total number to be displayed
+  tdEl.textContent = this.totalCookiesBought;
+//this is going to close the cell and append it to the row level
+  trEl.appendChild(tdEl);
+  tableList.appendChild(trEl);
+  for(var i = 0; i < hoursOpen.length; i++){
+//this is going to make a new header cell to hold an hour
+    tdEl = document.createElement ('td');
+//this is going to add the content of the hoursOpen
+    tdEl.textContent = this.numOfCookiesBoughtEachHour[i];
+//this is going to close each cell and append it to the row level
+    trEl.appendChild(tdEl);
+  }
+};
+
 var firstAndPike = new Store(23, 65, 6.3, 'First and Pike');
 var seatacAirport = new Store(3, 24, 1.2, 'Seatac Airport');
 var seattleCenter = new Store(11, 38, 3.7, 'Seattle Center');
@@ -45,42 +71,40 @@ alki.generateCookiesBoughtEachHour();
 var tableList = document.getElementById('salesData');
   //this makes a row for the header
 
-var trEl = document.createElement ('tr');
+function makeTableheader(){
+  var trEl = document.createElement ('tr');
 
 //this makes a header cell for the empty guy
-var thEl = document.createElement ('th');
+  var thEl = document.createElement ('th');
   //this gives that cell content, which is nothing
-thEl.textContent = ' ';
+  thEl.textContent = ' ';
   //this closes that cell and appends it to the row level
-trEl.appendChild(thEl);
+  trEl.appendChild(thEl);
 
 
 //this makes a new header cell for the totals only header
-var thEl = document.createElement ('th');
+  thEl = document.createElement ('th');
 //this is what that header cell will say
-thEl.textContent = 'Daily Location Total';
+  thEl.textContent = 'Daily Location Total';
 //this is going to close the cell and append it to the row level
-trEl.appendChild(thEl);
+  trEl.appendChild(thEl);
 
 
-function makeTableheader(){
   for(var i = 0; i < hoursOpen.length; i++){
 //this is going to make a new header cell to hold an hour
-    var thEl = document.createElement ('th')
+    thEl = document.createElement ('th');
 //this is going to add the content of the hoursOpen
     thEl.textContent = hoursOpen[i];
 //this is going to close each cell and append it to the row level
     trEl.appendChild(thEl);
   }
+  tableList.appendChild(trEl);
 };
 
 makeTableheader();
 
-tableList.appendChild(trEl);
-
-
-
-
-// var tdEl = document.createElement ('td');
-// tdEl.textContent = 'hello';
-// thEl.appendChild(tdEl);
+firstAndPike.makeAllCells();
+seatacAirport.makeAllCells();
+capitolHill.makeAllCells();
+alki.makeAllCells();
+seattleCenter.makeAllCells();
