@@ -9,6 +9,19 @@
   <h1>Pat's Salmon Cookies</h1>
   <!-- <img src = salmon.png> -->
   <table id = "salesData"></table>
+  <form id="salesForm">
+    <fieldset>
+      <label for="minCust">Minimum Customers Per Hour:</label>
+      <input id="minCust" type="number" name="minCust">
+      <label for="maxCust">Maximum Customers Per Hour:</label>
+      <input id="maxCust" type="number" name="maxCust">
+      <label for="avgCookiePerCust">Average Cookies Per Customer:</label>
+      <input id="avgCookiePerCust" type="number" name="avgCookiePerCust">
+      <label for="where">Store Name:</label>
+      <input id="where" type="text" name="where">
+    </fieldset>
+      <input type="submit" value="Submit Me">
+  </form>
   <script src="app.js"></script>
 </body>
 </html>
