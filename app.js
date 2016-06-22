@@ -43,13 +43,44 @@ alki.generateCookiesBoughtEachHour();
 
 ///now to make the table
 var tableList = document.getElementById('salesData');
-for(var i = 0; i < myStores.length; i++){
-  var trEl = document.createElement ('tr');
-  var thEl = document.createElement ('th');
-  thEl.textContent = hoursOpen[i];
-  trEl.appendChild(thEl);
-  tableList.appendChild(trEl);
+  //this makes a row for the header
+
+var trEl = document.createElement ('tr');
+
+//this makes a header cell for the empty guy
+var thEl = document.createElement ('th');
+  //this gives that cell content, which is nothing
+thEl.textContent = ' ';
+  //this closes that cell and appends it to the row level
+trEl.appendChild(thEl);
+
+
+//this makes a new header cell for the totals only header
+var thEl = document.createElement ('th');
+//this is what that header cell will say
+thEl.textContent = 'Daily Location Total';
+//this is going to close the cell and append it to the row level
+trEl.appendChild(thEl);
+
+
+function makeTableheader(){
+  for(var i = 0; i < hoursOpen.length; i++){
+//this is going to make a new header cell to hold an hour
+    var thEl = document.createElement ('th')
+//this is going to add the content of the hoursOpen
+    thEl.textContent = hoursOpen[i];
+//this is going to close each cell and append it to the row level
+    trEl.appendChild(thEl);
+  }
 };
+
+makeTableheader();
+
+tableList.appendChild(trEl);
+
+
+
+
 // var tdEl = document.createElement ('td');
 // tdEl.textContent = 'hello';
 // thEl.appendChild(tdEl);
