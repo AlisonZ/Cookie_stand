@@ -108,3 +108,30 @@ seatacAirport.makeAllCells();
 capitolHill.makeAllCells();
 alki.makeAllCells();
 seattleCenter.makeAllCells();
+
+function handleSalesFormSubmit(event) {
+  event.preventDefault();
+
+  if(!event.target.minCust.value || !event.target.maxCust.value || !event.target.avgCookiePerCust.value || !event.target.where.value) {
+    return alert('Field cannot be empty!');
+  }
+
+  var minCust = event.target.minCust.value;
+  var maxCust = event.target.maxCust.value;
+  var avgCookiePerCust = event.target.avgCookiePerCust.value;
+  var where = event.target.where.value;
+
+  var newStore = new Store(minCust, maxCust, avgCookiePerCust, where);
+
+  myStores.push(newStore);
+
+  newStore.generateCookiesBoughtEachHour();
+  newStore.makeAllCells();
+
+  event.target.minCust.value = null;
+  event.target.maxCust.value = null;
+  event.target.avgCookiePerCust.value = null;
+  event.target.where.value = null;
+}
+
+salesForm.addEventListener('submit', handleSalesFormSubmit);
