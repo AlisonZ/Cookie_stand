@@ -47,10 +47,11 @@ table {
 	border-spacing: 0;
 }
 
-/*this is the code for the sales page*/
+//
 *{
 	font-family: "Palatino Linotype";
 	color: black;
+	font-size: 16px;
 }
 
 /*starting with the header*/
@@ -89,39 +90,6 @@ h1 {
   /*text-align: center;*/
   font-family: 'Roboto Slab', serif;
   font-size: 48px;
-}
-
-.header_color{
-	height:100px;
-	width:100px;
-	background-color: #00B29C;
-	border-radius:60px;
-}
-
-.secondary_color{
-	height:100px;
-	width:100px;
-	background-color:#FDFFDF;
-	border-radius: 60px;
-}
-
-.tertiary_color{
-	height: 100px;
-	width: 100px;
-	background-color: #B23700;
-	border-radius: 60px;
-}
-
-.fourth_color{
-	height: 100px;
-	width: 100px;
-	background-color: #666;
-	border-radius: 60px;
-}
-
-.styleTypes li{
-	float:left;
-  margin-right: 30px;
 }
 
 
