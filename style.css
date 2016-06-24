@@ -84,19 +84,24 @@ td{
 }*/
 
 /*This is the styling for the user page*/
+*{
+	font-family: "Palatino Linotype";
+	color: black;
+}
 header {
-  background: #777;
+  background-color: #00B29C;
   height: 150px;
 }
 
 .inner {
   width: 960px;
   margin: 0 auto;
+	background-color: #00B29C;
 }
 
 .inner img{
   float: left;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 10px;
   width:100px;
   height:100px;
@@ -105,37 +110,70 @@ header {
 .inner ul li{
   display: inline-block;
   margin-left: 60px;
-  margin-top: 30px;
+  margin-top: 40px;
+	font-size: 20px;
+	padding: 20px;
+	background-color: #FDFFDF;
+	border-radius:6px;
+	font-family: 'Shadows Into Light Two', cursive;
 }
 
 main {
   width: 960px;
   margin: 30px auto;
 }
+
 .banner {
   margin-top: 30px;
   margin-bottom: 30px;
-  background-color: #888;
+  background-color: #FDFFDF;
   height: 450px;
   width: 960px;
 }
 
 .banner p{
-  color: black;
   text-align: center;
-  font-size: 36px;
+  font-size: 64px;
+	margin-top: 30px;
+	font-family: 'Shadows Into Light Two', cursive;
+
 }
 #salmon{
   display: block;
   margin-left: auto;
   margin-right: auto;
+	margin-top: 30px;
 }
 
+section{
+	background-color: maroon;
+	height: 150px;
+}
+
+section img{
+	float: left;
+  margin-right: 10px;
+	height: 150px;
+	width: 150px;
+	/*border: solid;*/
+	/*border-width: 40px;
+	border-color: #610100;*/
+}
+section p{
+	font-size: 60px;
+	color: #FDFFDF;
+	text-align: center;
+}
+
+.bottom_list{
+	clear:both;
+}
 .bottom_list li{
   float:left;
   margin-right: 30px;
   height:400px;
   width: 300px;
+	margin-top: 30px;
 }
 
 .bottom_list li:last-child{
@@ -144,8 +182,8 @@ main {
 }
 
 .shop{
-  color:black;
-  background-color: #444;
+  /*color:red;*/
+  background-color: #666;
   height:400px;
   width:300px;
   text-align: center;
@@ -159,14 +197,8 @@ main {
   margin-top: 40px;
 }
 
-
-section img{
-  float:left;
-  margin-right: 10px;
-}
-
 footer{
-  clear:left;
+	clear:left;
   height: 100px;
-  background: #444;
+  background: #00B29C;
 }
