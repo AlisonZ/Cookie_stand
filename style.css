@@ -1,4 +1,55 @@
-*{
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*This is where my code starts */
+/*this is the code for the sales page*/
+/**{
   background-color: #F5D6C4;
 }
 
@@ -24,11 +75,98 @@ table{
   font-family: Arial;
   border-radius: 8px;
 }
-
 td{
   border-color:black;
   border-style: solid;
   border-width: thin;
   background-color: #888;
   border-radius: 8px;
+}*/
+
+/*This is the styling for the user page*/
+header {
+  background: #777;
+  height: 150px;
+}
+
+.inner {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.inner img{
+  float: left;
+  margin-top: 10px;
+  margin-left: 10px;
+  width:100px;
+  height:100px;
+}
+
+.inner ul li{
+  display: inline-block;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+
+main {
+  width: 960px;
+  margin: 30px auto;
+}
+.banner {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #888;
+  height: 450px;
+  width: 960px;
+}
+
+.banner p{
+  color: black;
+  text-align: center;
+  font-size: 36px;
+}
+#salmon{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom_list li{
+  float:left;
+  margin-right: 30px;
+  height:400px;
+  width: 300px;
+}
+
+.bottom_list li:last-child{
+  margin-right: 0px;
+  margin-bottom: 30px;
+}
+
+.shop{
+  color:black;
+  background-color: #444;
+  height:400px;
+  width:300px;
+  text-align: center;
+  font-size: 40px;
+}
+.shop img{
+  display:block;
+  margin: 30px auto;
+  height: 200px;
+  width:200px;
+  margin-top: 40px;
+}
+
+
+section img{
+  float:left;
+  margin-right: 10px;
+}
+
+footer{
+  clear:left;
+  height: 100px;
+  background: #444;
 }
