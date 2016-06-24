@@ -47,47 +47,13 @@ table {
 	border-spacing: 0;
 }
 
-/*This is where my code starts */
 /*this is the code for the sales page*/
-/**{
-  background-color: #F5D6C4;
-}
-
-h1 {
-  text-align: center;
-  font-family: 'Roboto Slab', serif;
-  font-size: 48px;
-}
-
-#salesData {
-  background-color: #888;
-}
-
-th {
-  background-color:#2FA1A1;
-  border-radius: 8px;
-}
-
-table{
-  font-size: 25px;
-  border-color:black;
-  border-style:solid;
-  font-family: Arial;
-  border-radius: 8px;
-}
-td{
-  border-color:black;
-  border-style: solid;
-  border-width: thin;
-  background-color: #888;
-  border-radius: 8px;
-}*/
-
-/*This is the styling for the user page*/
 *{
 	font-family: "Palatino Linotype";
 	color: black;
 }
+
+/*starting with the header*/
 header {
   background-color: #00B29C;
   height: 150px;
@@ -117,6 +83,72 @@ header {
 	border-radius:6px;
 	font-family: 'Shadows Into Light Two', cursive;
 }
+
+
+h1 {
+  /*text-align: center;*/
+  font-family: 'Roboto Slab', serif;
+  font-size: 48px;
+}
+
+.header_color{
+	height:100px;
+	width:100px;
+	background-color: #00B29C;
+	border-radius:60px;
+}
+
+.secondary_color{
+	height:100px;
+	width:100px;
+	background-color:#FDFFDF;
+	border-radius: 60px;
+}
+
+.tertiary_color{
+	height: 100px;
+	width: 100px;
+	background-color: #B23700;
+	border-radius: 60px;
+}
+
+.fourth_color{
+	height: 100px;
+	width: 100px;
+	background-color: #666;
+	border-radius: 60px;
+}
+
+.styleTypes li{
+	float:left;
+  margin-right: 30px;
+}
+
+
+#salesData {
+  background-color: #888;
+}
+
+th {
+  background-color:#2FA1A1;
+  border-radius: 8px;
+}
+
+table{
+  font-size: 25px;
+  border-color:black;
+  border-style:solid;
+  font-family: Arial;
+  border-radius: 8px;
+}
+td{
+  border-color:black;
+  border-style: solid;
+  border-width: thin;
+  background-color: #888;
+  border-radius: 8px;
+}
+
 
 main {
   width: 960px;
