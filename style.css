@@ -57,8 +57,9 @@ table {
 /*starting with the header*/
 header {
   background-color: #00B29C;
-  height: 150px;
+  height: 200px;
 }
+
 
 .inner {
   width: 960px;
@@ -85,12 +86,13 @@ header {
 	font-family: 'Shadows Into Light Two', cursive;
 }
 
-
+/*
 h1 {
   /*text-align: center;*/
   font-family: 'Roboto Slab', serif;
   font-size: 48px;
-}
+
+/*}*/
 
 
 #salesData {
@@ -98,8 +100,11 @@ h1 {
 }
 
 th {
-  background-color:#2FA1A1;
-  border-radius: 8px;
+  background-color:#FDFFDF;
+	margin-top: 30px;
+	border:solid;
+	border-width: thin;
+  /*border-radius: 8px;*/
 }
 
 table{
@@ -107,14 +112,14 @@ table{
   border-color:black;
   border-style:solid;
   font-family: Arial;
-  border-radius: 8px;
+  /*border-radius: 8px;*/
 }
 td{
   border-color:black;
   border-style: solid;
   border-width: thin;
   background-color: #888;
-  border-radius: 8px;
+  /*border-radius: 8px;*/
 }
 
 
