@@ -69,8 +69,8 @@ alki.generateCookiesBoughtEachHour();
 
 ///now to make the table
 var tableList = document.getElementById('salesData');
-  //this makes a row for the header
 
+  //this makes a row for the header
 function makeTableheader(){
   var trEl = document.createElement ('tr');
 

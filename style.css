@@ -95,33 +95,34 @@ h1 {
 /*}*/
 
 
-#salesData {
-  background-color: #888;
+/*This changes the font of the data in the table*/
+tr {
+	color:black;
 }
-
+/*This changes the top row*/
 th {
-  background-color:#FDFFDF;
-	margin-top: 30px;
+	color:black;
+	background-color:#FDFFDF;
+	/*margin-top: 0px;*/
 	border:solid;
 	border-width: thin;
   /*border-radius: 8px;*/
 }
-
+/*this is the main border around the entire table and affects the elements in the entire table*/
 table{
   font-size: 25px;
-  border-color:black;
+	border-width: medium;
   border-style:solid;
   font-family: Arial;
-  /*border-radius: 8px;*/
+
 }
+/*this changes the individual cells below the header and */
 td{
-  border-color:black;
   border-style: solid;
   border-width: thin;
-  background-color: #888;
+  background-color:#666;
   /*border-radius: 8px;*/
 }
-
 
 main {
   width: 960px;
