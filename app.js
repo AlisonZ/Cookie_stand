@@ -2,9 +2,11 @@
 function generateRandomNum(min, max){
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+
 var hoursOpen = ['6:00 am','7:00 am','8:00 am','9:00 am','10:00 am','11:00 am','12:00 pm','1:00 pm','2:00 pm','3:00 pm','4:00 pm','5:00 pm','6:00 pm','7:00 pm','8:00 pm'];
 var myStores = [];
 
+// this is the constructor function for generating the stores
 function Store(minCust, maxCust, avgCookiePerCust, where){
   this.minCust = minCust;
   this.maxCust = maxCust;
@@ -21,6 +23,7 @@ Store.prototype.generateHourlyCustomer = function(){
     this.numOfHourlyCust[i] = generateRandomNum(this.minCust, this.maxCust);
   };
 };
+
 Store.prototype.generateCookiesBoughtEachHour = function(){
   this.generateHourlyCustomer();
   for(var i = 0; i < hoursOpen.length; i++){
@@ -81,14 +84,12 @@ function makeTableheader(){
   //this closes that cell and appends it to the row level
   trEl.appendChild(thEl);
 
-
 //this makes a new header cell for the totals only header
   thEl = document.createElement ('th');
 //this is what that header cell will say
   thEl.textContent = 'Daily Location Total';
 //this is going to close the cell and append it to the row level
   trEl.appendChild(thEl);
-
 
   for(var i = 0; i < hoursOpen.length; i++){
 //this is going to make a new header cell to hold an hour

@@ -23,6 +23,7 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -48,116 +49,81 @@ table {
 }
 
 //
-*{
-  font-family: helvetica;
-}
-
-h1{
+* {
+  font-family: helvetica;}
+h1 {
   font-family: Georgia;
   font-size: 40px;
   margin-bottom: 30px;
   margin-top: 30px;
   margin-left: 15px;
-  color: #999;
-}
-h2{
-  color:red;
-}
-
-.styleTypes li{
+  color: #999;}
+h2 {
+  color:red;}
+.styleTypes li {
   float:left;
   margin-right: 30px;
   margin-left: 15px;
   margin-right: 30px;
-  margin-left: 15px;
-}
-
-.styleTypes li p{
+  margin-left: 15px;}
+.styleTypes li p {
   margin-top: 100px;
-  margin-left:20px;
-
-}
-
-.header_color{
+  margin-left:20px;}
+.header_color {
 	height:100px;
 	width:100px;
 	background-color: #00B29C;
-	border-radius:60px;
-}
-
-.secondary_color{
+	border-radius:60px;}
+.secondary_color {
 	height:100px;
 	width:100px;
 	background-color:#FDFFDF;
-	border-radius: 60px;
-}
-
-.tertiary_color{
+	border-radius: 60px;}
+.tertiary_color {
 	height: 100px;
 	width: 100px;
 	background-color: #B23700;
-	border-radius: 60px;
-}
-
-.fourth_color{
+	border-radius: 60px;}
+.fourth_color {
 	height: 100px;
 	width: 100px;
 	background-color: #666;
-	border-radius: 60px;
-}
-
-#typographyHeader{
+	border-radius: 60px;}
+#typographyHeader {
   clear:both;
-  margin-top:200px;
-}
-.typographyTypes li{
+  margin-top:200px;}
+.typographyTypes li {
   margin:10px 0px 5px 15px;
   font-size: 25px;
   font-family: Helvetica;
   width:150px;
   border:solid;
-  border-style: ridge;
-
-}
-
-#headingsTypography{
+  border-style: ridge;}
+#headingsTypography {
   font-family: Georgia;
   font-size: 16px;
-  margin-left: 60px;
-}
-
-#buttonsTypography{
+  margin-left: 60px;}
+#buttonsTypography {
   font-family:Helvetica;
   font-size: 16px;
-  margin-left: 60px;
-}
-
-#linkTypography{
+  margin-left: 60px;}
+#linkTypography {
   font-family:Helvetica;
   font-size: 16px;
-  margin-left: 60px;
-}
-
-#strongTypography{
+  margin-left: 60px;}
+#strongTypography {
   font-family:Helvetica;
   font-size: 16px;
-  margin-left: 60px;
-}
-
-#emphasisTypography{
+  margin-left: 60px;}
+#emphasisTypography {
   font-family: 'Shadows Into Light Two';
   font-size: 16px;
-  margin-left: 60px;
-}
-
-#paragraphTypography{
+  margin-left: 60px;}
+#paragraphTypography {
   font-family: "Palatino Linotype";
   font-size: 16px;
-  margin-left: 60px;
-}
-
-#dataTypography{
+  margin-left: 60px;}
+#dataTypography {
   font-family:Helvetica;
   font-size: 16px;
-  margin-left: 60px;
-}
+  margin-left: 60px;}
