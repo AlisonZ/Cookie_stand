@@ -6,6 +6,7 @@ function generateRandomNum(min, max){
 var hoursOpen = ['6:00 am','7:00 am','8:00 am','9:00 am','10:00 am','11:00 am','12:00 pm','1:00 pm','2:00 pm','3:00 pm','4:00 pm','5:00 pm','6:00 pm','7:00 pm','8:00 pm'];
 var myStores = [];
 
+// this is the constructor function for generating the stores
 function Store(minCust, maxCust, avgCookiePerCust, where){
   this.minCust = minCust;
   this.maxCust = maxCust;
